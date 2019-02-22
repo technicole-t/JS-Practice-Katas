@@ -3,16 +3,14 @@ describe('practicee iteration', () => {
     describe('iteration problems', () => {
         it('push the numbers from 1 up to ( and including ) 20 into items', () => {
             const items = [];
-            // your for loop here...
+            // your loop here...
             expect(items).toEqual([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]);
         });
 
         it('push the even numbers from 0 up to ( and including ) 14 into items', () => {
 
             const items = [];
-
-            // your loop here ...
-
+            // your loop here...
             expect(items).toEqual([0, 2, 4, 6, 8, 10, 12, 14]);
         });
 
