@@ -1,49 +1,60 @@
 describe('using map()', () => {
     describe("incrementNums()", () => {
-        it("return list when no increment is provided", () => {
+        it("returns the same list when no increment is provided", () => {
             const list = [1, 2];
             const actual = incrementNums(list);
             const expected = [1, 2];
             expect(actual).toEqual(expected);
         });
-        it("an array of one number is incremented once by given n of 1", () => {
+        it("an array of one number is increased by increment of 1", () => {
             const list = [3];
-            const num = 1;
-            const actual = incrementNums(list, num);
+            const actual = incrementNums(list, 1);
             const expected = [4];
             expect(actual).toEqual(expected);
         });
-        it("an array of two numbers is incremented once by given n of one", () => {
+        it("an array of two numbers can be incremented by 1", () => {
             const list = [3, 4];
-            const num = 1;
-            const actual = incrementNums(list, num);
+            const actual = incrementNums(list, 1);
             const expected = [4, 5];
             expect(actual).toEqual(expected);
         });
-        it("an array of a few numbers is incremented once by given n of more than one", () => {
+        it("an array of more than 2 distinct numbers can be incremented by 1", () => {
             const list = [3, 4, 66, 74];
-            const num = 10;
-            const actual = incrementNums(list, num);
-            const expected = [13, 14, 76, 84];
+            const actual = incrementNums(list, 1);
+            const expected = [4, 5, 67, 75];
+            expect(actual).toEqual(expected);
+        });
+        it("an array of more than 2 distinct numbers can be incremented by more than 1", () => {
+            let list = [3, 4, 66, 74];
+            let actual = incrementNums(list, 10);
+            let expected = [13, 14, 76, 84];
+            expect(actual).toEqual(expected);
+            list = [3, 4, 5, 6, 7];
+            actual = incrementNums(list, 100);
+            expected = [103, 104, 105, 106, 107];
             expect(actual).toEqual(expected);
         });
     });
     describe("multiplyNums()", () => {
-        it("returns original array unchanged when nothing is passed in as n ", () => {
-            const list = [1];
-            const num = 1;
-            const actual = multiplyNums(list, num);
-            const expected = [1];
+        it("returns original array unchanged when no increment is passed ", () => {
+            const list = [1, 2, 3];
+            const actual = multiplyNums(list);
+            const expected = [1, 2, 3];
             expect(actual).toEqual(expected);
         });
-        it("returns original array unchanged when nothing is passed in as n ", () => {
-            const list = [1];
-            const num = 0;
-            const actual = multiplyNums(list, num);
-            const expected = [0];
+        it("single number in array is multipled by num for an array of length 1", () => {
+            let list = [2];
+            let num = 10;
+            let actual = multiplyNums(list, num);
+            let expected = [20];
+            expect(actual).toEqual(expected);
+            list = [3];
+            num = 5;
+            actual = multiplyNums(list, num);
+            expected = [15];
             expect(actual).toEqual(expected);
         });
-        it("returns an array multiplied by 2", () => {
+        it("all items in array multipled by number for an array of length greater than 2", () => {
             const list = [1, 2];
             const num = 2;
             const actual = multiplyNums(list, num);
