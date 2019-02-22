@@ -1,4 +1,4 @@
-const progressBar = document.querySelector('progress');
+// const progressBar = document.querySelector('progress');
 
 class TestSuite {
     constructor() {

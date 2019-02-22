@@ -9,7 +9,7 @@ const accessObject = (obj, key) => {
     // return obj[key];
 };
 
-const checkHasProperty = (obj,key) => {
+const checkHasProperty = (obj, key) => {
     // will check if an object has a given key-value pair
 };
 

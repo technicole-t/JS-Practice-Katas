@@ -17,18 +17,14 @@ describe('practicee iteration', () => {
         it('push the multiples of 5 from 10 to 100 ( inclusive ) in ascending order into items', () => {
 
             const items = [];
-
             // your loop here ...
-
             expect(items).toEqual([10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90, 95, 100]);
         });
 
         it('push the numbers from 42 down to ( and including ) 3 in descending order into items', () => {
 
             const items = [];
-
             // your loop here...
-
             expect(items).toEqual([42, 41, 40, 39, 38, 37, 36, 35, 34, 33, 32, 31, 30, 29, 28, 27, 26, 25, 24, 23, 22, 21, 20, 19, 18, 17, 16, 15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3]);
         });
 
@@ -36,9 +32,7 @@ describe('practicee iteration', () => {
 
             const sounds = ['fizz', 'buzz', 'bang', 'crash', 'wallop'];
             const exclaimedSounds = [];
-
             // your loop here...
-
             expect(exclaimedSounds).toEqual(['fizz!', 'buzz!', 'bang!', 'crash!', 'wallop!'])
         });
 
@@ -46,9 +40,7 @@ describe('practicee iteration', () => {
 
             const tutors = ['Anat', 'Paul C', 'Paul R', 'Jonny', 'Mitch', 'Vel', 'Alex', 'Ant']
             const tutorsAndIndex = [];
-
             // your loop here...
-
             expect(tutorsAndIndex).toEqual(["0 : Anat", "1 : Paul C", "2 : Paul R", "3 : Jonny", "4 : Mitch", "5 : Vel", "6 : Alex", "7 : Ant"]);
         });
 
@@ -56,18 +48,14 @@ describe('practicee iteration', () => {
 
             const tutors = ['Angela', 'Anne', 'Elizabeth', 'Julie', 'Mo', 'Barbara'];
             const tutorsOverLength5 = [];
-
             // your loop here...
-
             expect(tutorsOverLength5).toEqual(['Angela', 'Elizabeth', 'Barbara']);
         });
 
         it('update a variable **total** to get the total of adding all the numbers from 1 to 50', () => {
 
             let total = 0;
-
             // your loop here...
-
             expect(total).toEqual(1275);
         });
 
@@ -75,9 +63,7 @@ describe('practicee iteration', () => {
 
             let checkList = '';
             const items = ['apple', 'banana', 'pear', 'orange'];
-
             // your loop here...
-
             expect(checkList).toEqual('apple, banana, pear and orange');
         });
 
@@ -85,9 +71,7 @@ describe('practicee iteration', () => {
 
             const list = ['hello', 'random', 3, true, false, '!', true, 1990, 'boom'];
             const stringsOnly = [];
-
             // your loop here...
-
             expect(stringsOnly).toEqual(['hello', 'random', '!', 'boom']);
         });
 
@@ -95,9 +79,7 @@ describe('practicee iteration', () => {
 
             const normalWords = ['I', 'am', 'learning', 'how', 'to', 'code'];
             const upperCaseWords = [];
-
             // your loop here ...
-
             expect(upperCaseWords).toEqual(['I', 'AM', 'LEARNING', 'HOW', 'TO', 'CODE']);
         });
 
@@ -118,9 +100,7 @@ describe('practicee iteration', () => {
 
             const staffOverOrAt28 = [];
             // your loop here...
-
             expect(staffOverOrAt28).toEqual(['Paul C', 'Vel', 'Sam', 'Jonny', 'Mitch']);
         });
-    })
-
+    });
 });

@@ -20,13 +20,19 @@ const createDescriptionBlock = (nestingDepth) => {
 
 const generateMessage = (description) => {
     const newMessage = createListElement(description, 'green');
-    return newMessage;
+    const newTick = document.createElement('span');
+    newTick.innerHTML = ' &#10003';
+    newTick.style.color = 'green';
+    newMessage.appendChild(newTick);
+    return newMessage
 };
 
 const generateError = (errorMessage) => {
-    // const
-    // <p>I will display &#10006;</p>
     const newErrorMessage = createListElement(errorMessage, 'red');
+    const cross = document.createElement('span');
+    cross.innerHTML = '  &#10006';
+    cross.style.color = 'red';
+    newErrorMessage.appendChild(cross);
     return newErrorMessage;
 };
 
