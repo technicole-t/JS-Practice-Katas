@@ -1,19 +1,30 @@
 <html>
 
 <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>Mocha Tests</title>
-    <link href="https://fonts.googleapis.com/css?family=Questrial" rel="stylesheet">
-    <script src="array-challenges.js"></script>
-    <script src="../setup/expect.js" defer></script>
-    <script src="../setup/test-utils.js" defer></script>
-    <script src="../setup/test-runner.js" defer></script>
-    <script src="regex-problems.spec.js" defer></script>
-    <link rel="stylesheet" type="text/css" href="../setup/display.css">
+    <link href="https://unpkg.com/mocha@4.0.1/mocha.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../../setup/display.css" type="text/css">
 </head>
 
 <body>
-    <h1>fundamentals day-1</h1>
+    <div id="mocha"></div>
+
+    <script src="https://unpkg.com/chai@4.1.2/chai.js"></script>
+    <script src="https://unpkg.com/mocha@4.0.1/mocha.js"></script>
+
+    <script>
+        mocha.setup('bdd');
+    </script>
+    <script src="./challenge-1.js"></script>
+    <script src="./challenge-2.js"></script>
+    <script src="./regex-problems.spec.js"></script>
+    <script src="../regex-problems/regex-data/code-strings.js"></script>
+    <script src="../regex-problems/regex-data/div-strings.js"></script>
+    <script>
+        mocha.checkLeaks();
+        mocha.run();
+    </script>
 </body>
 
 </html>
