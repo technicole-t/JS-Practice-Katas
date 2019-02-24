@@ -5,7 +5,6 @@ describe('practice iteration', () => {
     it('push the numbers from 1 up to ( and including ) 20 into items', () => {
       const items = [];
       // your loop here...
-
       expect(items).to.eql([
         1,
         2,
@@ -201,7 +200,6 @@ describe('practice iteration', () => {
         { name: 'Tom', age: 25 },
         { name: 'Alex', age: 28 }
       ];
-
       const staffOverOrAt28 = [];
       // your loop here...
       expect(staffOverOrAt28).to.eql([
