@@ -19,9 +19,13 @@ describe('object practice', function () {
       son.lastname = 'Bluth';
       son.age = 16;
       son.jobs = ['Frozen Banana Salesman', 'CEO of Fakeblock'];
+      function sayName() {
+        return 'George Michael';
+      };
+      son.sayName = sayName;
 
-      expect(son.name).to.equal(FILL_ME_IN);
-      expect(typeof son.jobs).to.equal(FILL_ME_IN);
+      expect(son.lastName).to.equal(FILL_ME_IN);
+      expect(son.sayName()).to.equal(FILL_ME_IN)
       expect(son.jobs[1]).to.equal(FILL_ME_IN);
     });
 
@@ -65,7 +69,7 @@ describe('object practice', function () {
 
       expect(bluthFamily.father.name).to.equal(FILL_ME_IN);
       expect(bluthFamily.mother['name']).to.equal(FILL_ME_IN);
-      expect(bluthFamily['sons'][2].name).to.equal(FILL_ME_IN);
+      expect(bluthFamily['sons'][1].name).to.equal(FILL_ME_IN);
     });
   });
   describe('further object access', () => {
@@ -131,8 +135,16 @@ describe('object practice', function () {
         };
         let actual = removeProperty(oscarWinner, 'title');
         expect(actual).to.eql({ director: 'Barry Jenkins' });
-        actual = removeProperty(oscarWinner, 'director');
-        expect(actual).to.eql({ title: 'Moonlight' });
+      });
+      it('repeatedly removes given properties from a object', () => {
+        const oscarWinner = {
+          title: 'Moonlight',
+          director: 'Barry Jenkins'
+        };
+        let actual = removeProperty(oscarWinner, 'title');
+        expect(actual).to.eql({ director: 'Barry Jenkins' });
+        let actual = removeProperty(oscarWinner, 'director');
+        expect(actual).to.eql({});
       });
       it('returns the same object if a property inside the object is passed', () => {
         const oscarWinner = {

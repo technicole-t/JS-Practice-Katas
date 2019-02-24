@@ -1,7 +1,7 @@
 
 const accessName = (person) => {
-    // given a person object of the form {name: 'Bob', age: 42}
-    // should return 'Bob'
+    // given a person object of the form { name: 'Bob', age: 42 }
+    // should access the name value to return 'Bob'
 };
 
 const accessObject = (obj, key) => {
@@ -14,7 +14,7 @@ const checkHasProperty = (obj, key) => {
 };
 
 const removeName = (person) => {
-    // remove the age property from a person
+    // remove the name property from a person
 };
 
 const removeProperty = (obj, key) => {
