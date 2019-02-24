@@ -26,28 +26,56 @@ describe('regex-problems', () => {
         });
     });
     describe('getIDs()', () => {
-        it('can get the id from an array with a single empty html div string', () => {
+        it('can get a single letter id from a div string with no inner text', () => {
+            let inputCode = ['<div id="a"></div>'];
+            let actual = getIDs(inputCode);
+            let desiredOutcome = ["a"];
+            expect(actual).to.eql(desiredOutcome);
+            inputCode = ['<div id="z"></div>'];
+            actual = getIDs(inputCode);
+            desiredOutcome = ["z"];
+            expect(actual).to.eql(desiredOutcome);
+        });
+        it('can get a mutliple letter id from a div string with no inner text', () => {
             let inputCode = ['<div id="menu"></div>'];
             let actual = getIDs(inputCode);
             let desiredOutcome = ["menu"];
             expect(actual).to.eql(desiredOutcome);
         });
-        it('can get the id from an array with a single html div string containing a word', () => {
+        it('can get a multiple letter id from a single div containing a single word of inner text', () => {
+            let inputCode = ['<div id="menu">Carte</div>'];
+            let actual = getIDs(inputCode);
+            let desiredOutcome = ["menu"];
+            expect(actual).to.eql(desiredOutcome);
+        });
+        it('can get a multiple letter id from a single div containing multiple words of inner text', () => {
             let inputCode = ['<div id="menu">A La Carte</div>'];
             let actual = getIDs(inputCode);
             let desiredOutcome = ["menu"];
             expect(actual).to.eql(desiredOutcome);
         });
-        it('can get the id from a a html element where the id contains a -', () => {
-            let inputCode = ['<div id="online-menu">A La Carte</div>'];
+        it('can get a mutiple character id (including hyphens) from a div containing multiple words of inner text', () => {
+            let inputCode = ['<div id="online-menu">A La Carte</div>']
             let actual = getIDs(inputCode);
             let desiredOutcome = ["online-menu"];
             expect(actual).to.eql(desiredOutcome);
         });
-        it('can get the id from an array of multiple html div strings', () => {
-            let inputCode = ['<div id="menu">A La Carte</div>', '<div id="box"></div>'];
+        it('can get ids from an array of multiple div strings', () => {
+            let inputCode = ['<div id="online-menu">A La Carte</div>', '<div id="red-box">Welcome to the site</div>', '<div id="northcoders-in-leeds">Hello</div>'];
             let actual = getIDs(inputCode);
-            let desiredOutcome = ["menu", "box"];
+            let desiredOutcome = ["online-menu", "red-box", "northcoders-in-leeds"];
+            expect(actual).to.eql(desiredOutcome);
+        });
+    });
+    describe('filterDipthongs()', () => {
+        it('can filter out a single word', () => {
+            let inputCode = [''];
+            let actual = getIDs(inputCode);
+            let desiredOutcome = ["a"];
+            expect(actual).to.eql(desiredOutcome);
+            inputCode = ['<div id="z"></div>'];
+            actual = getIDs(inputCode);
+            desiredOutcome = ["z"];
             expect(actual).to.eql(desiredOutcome);
         });
     });
