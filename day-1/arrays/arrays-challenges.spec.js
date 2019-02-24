@@ -164,18 +164,30 @@ describe('accessing arrays', () => {
       expect(actual).to.equal(expected);
     });
   });
-  describe('getMiddleItem()', () => {
+  describe('getMiddle()', () => {
     it('can access middle item for an array containing one item', () => {
-      let arr = ['LEEDS!'];
-      let actual = getMiddle(arr);
-      let expected = 'LEEDS!';
+      const arr = ['LEEDS!'];
+      const actual = getMiddle(arr);
+      const expected = ['LEEDS!'];
       expect(actual).to.equal(expected);
     });
-    it('can access middle two items in an array contaning two items', () => {
-      let arr = ['NORTHCODERS', 'LEEDS'];
-      let actual = getMiddle(arr);
-      let expected = ['NORTHCODERS', 'LEEDS'];
+    it('can access middle two items in an array contaninig two items', () => {
+      const arr = ['NORTHCODERS', 'LEEDS'];
+      const actual = getMiddle(arr);
+      const expected = ['NORTHCODERS', 'LEEDS'];
       expect(actual).to.eql(expected);
+    });
+    it('can access middle item in an odd length array of multiple (more than 1) items', () => {
+      const arr = ['Javascript!', 'woo', 'LEEDS!', 'yorkshire', 'coding'];
+      const actual = getMiddle(arr);
+      const expected = ['LEEDS!'];
+      expect(actual).to.equal(expected);
+    });
+    it('can access middle two items in an even length array of more than 2 items', () => {
+      const arr = ['Javascript!', 'woo', 'LEEDS!', 'yorkshire', 'coding', 'northcoders'];
+      const actual = getMiddle(arr);
+      const expected = ['LEEDS!', 'yorkshire'];
+      expect(actual).to.equal(expected);
     });
   });
 });
