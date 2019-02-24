@@ -7,33 +7,33 @@ describe('accessing arrays', () => {
       const multiTypeArray = ['I am a string', 42, true, [1, 2, 3]];
 
       const position0 = multiTypeArray[0];
-      expect(position0).to.equal('I am a string');
+      expect(position0).to.equal(FILL_ME_IN);
 
       const position1 = multiTypeArray[1];
-      expect(position1).to.equal(42);
+      expect(position1).to.equal(FILL_ME_IN);
 
       const position2 = multiTypeArray[2];
-      expect(position2).to.equal(true);
+      expect(position2).to.equal(FILL_ME_IN);
 
       const position3 = multiTypeArray[3];
 
-      expect(position3).to.eql([1, 2, 3]);
+      expect(position3).to.eql(FILL_ME_IN);
     });
 
     it('access arrays nested inside arrays', () => {
       const rows = [[1, 2, 3], ['a', 'b', 'c'], [true, true, false]];
 
-      expect(rows[0]).to.eql([1, 2, 3]);
-      expect(rows[1]).to.eql(['a', 'b', 'c']);
-      expect(rows[2]).to.eql([true, true, false]);
+      expect(rows[0]).to.eql(FILL_ME_IN);
+      expect(rows[1]).to.eql(FILL_ME_IN);
+      expect(rows[2]).to.eql(FILL_ME_IN);
 
       const firstRow = rows[0];
-      expect(firstRow[0]).to.equal(1);
-      expect(firstRow[1]).to.equal(2);
+      expect(firstRow[0]).to.equal(FILL_ME_IN);
+      expect(firstRow[1]).to.equal(FILL_ME_IN);
 
-      expect(rows[1][1]).to.equal('b');
-      expect(rows[2][2]).to.equal(false);
-      expect(rows[0][2]).to.equal(3);
+      expect(rows[1][1]).to.equal(FILL_ME_IN);
+      expect(rows[2][2]).to.equal(FILL_ME_IN);
+      expect(rows[0][2]).to.equal(FILL_ME_IN);
     });
 
     it('find elements with the indexOf() method', () => {
@@ -45,71 +45,56 @@ describe('accessing arrays', () => {
         'even more hay',
         'ALL THE HAY!'
       ];
-      expect(haystack.indexOf('needle')).to.equal(3);
-      expect(haystack.indexOf('watch')).to.equal(-1);
+      expect(haystack.indexOf('needle')).to.equal(FILL_ME_IN);
+      expect(haystack.indexOf('watch')).to.equal(FILL_ME_IN);
     });
 
     it('use push() method to add items to the end of the array', () => {
       const news = ['northcoders', 'in', 'Leeds!', 'woo'];
       news.push('yorkshire');
 
-      expect(news).to.eql(['northcoders', 'in', 'Leeds!', 'woo', 'yorkshire']);
-      expect(news.length).to.equal(5);
+      expect(news).to.eql(FILL_ME_IN);
+      expect(news.length).to.equal(FILL_ME_IN);
 
       news.push(['oop', 'north!']);
 
-      expect(news).to.eql([
-        'northcoders',
-        'in',
-        'Leeds!',
-        'woo',
-        'yorkshire',
-        ['oop', 'north!']
-      ]);
-      expect(news.length).to.equal(6);
+      expect(news).to.eql(FILL_ME_IN);
+      expect(news.length).to.equal(FILL_ME_IN);
 
       news.push('hello');
 
-      expect(news).to.eql([
-        'northcoders',
-        'in',
-        'Leeds!',
-        'woo',
-        'yorkshire',
-        ['oop', 'north!'],
-        'hello'
-      ]);
+      expect(news).to.eql(FILL_ME_IN);
       expect(news.length).to.equal(7);
     });
 
     it('get the last element of an array with pop()', () => {
       const nums = [1, 2, 3];
       const lastElement = nums.pop();
-      expect(nums).to.eql([1, 2]);
-      expect(nums.length).to.equal(2);
-      expect(lastElement).to.equal(3);
+      expect(nums).to.eql(FILL_ME_IN);
+      expect(nums.length).to.equal(FILL_ME_IN);
+      expect(lastElement).to.equal(FILL_ME_IN);
     });
 
     it('get the slice of an array', () => {
       const alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j'];
 
-      expect(alphabet.slice(1, 4)).to.eql(['b', 'c', 'd']);
-      expect(alphabet.slice(2, 3)).to.eql(['c']);
-      expect(alphabet.slice(3, 5)).to.eql(['d', 'e']);
-      expect(alphabet.slice(-1)).to.eql(['j']);
-      expect(alphabet.slice(1, -3)).to.eql(['b', 'c', 'd', 'e', 'f', 'g']);
+      expect(alphabet.slice(1, 4)).to.eql(FILL_ME_IN);
+      expect(alphabet.slice(2, 3)).to.eql(FILL_ME_IN);
+      expect(alphabet.slice(3, 5)).to.eql(FILL_ME_IN);
+      expect(alphabet.slice(-1)).to.eql(FILL_ME_IN);
+      expect(alphabet.slice(1, -3)).to.eql(FILL_ME_IN);
     });
 
     it('use the join method to create strings from arrays', () => {
       const list = ['Here', 'is', 'a', 'list', 'of', 'words'];
 
-      const sentenceWithNoGaps = list.join('');
+      const sentenceWithNoGaps = list.join(FILL_ME_IN);
       expect(sentenceWithNoGaps).to.equal('Hereisalistofwords');
 
-      const sentenceWithSpaces = list.join(' ');
+      const sentenceWithSpaces = list.join(FILL_ME_IN);
       expect(sentenceWithSpaces).to.equal('Here is a list of words');
 
-      const sentenceWithHyphens = list.join('-');
+      const sentenceWithHyphens = list.join(FILL_ME_IN);
       expect(sentenceWithHyphens).to.equal('Here-is-a-list-of-words');
     });
   });
