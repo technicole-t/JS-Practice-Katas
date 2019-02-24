@@ -3,13 +3,21 @@ const incrementNums = (list, increment = 0) => {
 };
 
 
-const multiplyNums = (list, num) => { };
+const multiplyNums = (list, increment = 1) => {
+    return list.map(num => num * increment)
+};
+
+const extractCatNames = (cats) => {
+    return cats.map(({ name }) => name);
+};
 
 
-const addQuestionMarks = (questions) => { };
+const addQuestionMarks = (questions) => {
+
+};
 
 
-const extractCatNames = (cats) => { };
+
 
 
 const getFullNames = (people) => { };

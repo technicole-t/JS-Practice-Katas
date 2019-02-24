@@ -3,17 +3,22 @@
 <head>
     <meta charset="utf-8">
     <title>Mocha Tests</title>
-    <link href="https://fonts.googleapis.com/css?family=Questrial" rel="stylesheet">
-    <script src="../setup/expect.js" defer></script>
-    <script src="../setup/test-utils.js" defer></script>
-    <script src="../setup/test-runner.js" defer></script>
-    <script src="map-challenges.js" defer></script>
-    <script src="map-challenges.spec.js" defer></script>
-    <link rel="stylesheet" type="text/css" href="../setup/display.css">
+    <link href="https://unpkg.com/mocha@4.0.1/mocha.css" rel="stylesheet" />
 </head>
 
 <body>
-    <h1>fundamentals day-1</h1>
+    <div id="mocha"></div>
+
+    <script src="https://unpkg.com/chai@4.1.2/chai.js"></script>
+    <script src="https://unpkg.com/mocha@4.0.1/mocha.js"></script>
+
+    <script>mocha.setup('bdd')</script>
+    <script src="./map-challenges.js"></script>
+    <script src="./map-challenges.spec.js"></script>
+    <script>
+        mocha.checkLeaks();
+        mocha.run();
+    </script>
 </body>
 
 </html>
