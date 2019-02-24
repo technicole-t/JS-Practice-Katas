@@ -143,7 +143,7 @@ describe('object practice', function () {
         };
         let actual = removeProperty(oscarWinner, 'title');
         expect(actual).to.eql({ director: 'Barry Jenkins' });
-        let actual = removeProperty(oscarWinner, 'director');
+        actual = removeProperty(oscarWinner, 'director');
         expect(actual).to.eql({});
       });
       it('returns the same object if a property inside the object is passed', () => {
