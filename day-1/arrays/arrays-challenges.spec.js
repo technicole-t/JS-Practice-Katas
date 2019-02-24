@@ -182,13 +182,13 @@ describe('accessing arrays', () => {
   describe('getMiddleItem()', () => {
     it('can access middle item for an array containing one item', () => {
       let arr = ['LEEDS!'];
-      let actual = getMiddleItem(arr);
+      let actual = getMiddle(arr);
       let expected = 'LEEDS!';
       expect(actual).to.equal(expected);
     });
     it('can access middle two items in an array contaning two items', () => {
       let arr = ['NORTHCODERS', 'LEEDS'];
-      let actual = getMiddleItem(arr);
+      let actual = getMiddle(arr);
       let expected = ['NORTHCODERS', 'LEEDS'];
       expect(actual).to.eql(expected);
     });
