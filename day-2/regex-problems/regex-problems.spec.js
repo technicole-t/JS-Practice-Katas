@@ -69,13 +69,13 @@ describe('regex-problems', () => {
     });
     describe('filterDipthongs()', () => {
         it('can filter out a single word', () => {
-            let inputCode = [''];
-            let actual = getIDs(inputCode);
-            let desiredOutcome = ["a"];
+            let inputWords = ['cool'];
+            let actual = filterDipthongs(inputWords);
+            let desiredOutcome = ['cool'];
             expect(actual).to.eql(desiredOutcome);
-            inputCode = ['<div id="z"></div>'];
-            actual = getIDs(inputCode);
-            desiredOutcome = ["z"];
+            inputWords = ['been'];
+            actual = filterDipthongs(inputCode);
+            desiredOutcome = ['been'];
             expect(actual).to.eql(desiredOutcome);
         });
     });

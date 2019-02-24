@@ -1,1 +1,1 @@
-const extractTotal = (codeStrings) => codeStrings.split('\n').reduce((total, codeString) => codeString.match(/\d+/) ? total + +codeString.match(/\d+/)[0] : total, 0);
+const extractTotal = (codeStrings) => { };
