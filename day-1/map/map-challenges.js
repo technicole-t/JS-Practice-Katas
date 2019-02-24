@@ -3,6 +3,7 @@ const incrementNums = (list, increment = 0) => {
 };
 
 
+
 const multiplyNums = (list, increment = 1) => {
     return list.map(num => num * increment)
 };
