@@ -104,34 +104,68 @@ describe('regex-problems', () => {
         });
     });
     describe('collectABs()', () => {
-        it('can get letter sequence consisting of just numbers', () => {
-            let inputSequence = ['2', '123'];
+        it('can filter out the strings consisting of a string with multi-digit number', () => {
+            let inputSequence = ['1', 'zsd'];
             let actual = collectABs(inputSequence);
-            let desiredOutcome = ['2'];
+            let desiredOutcome = ['1'];
             expect(actual).to.eql(desiredOutcome);
-            inputSequence = ['2', '123'];
+            inputSequence = ['12', '!@'];
             actual = collectABs(inputSequence);
-            desiredOutcome = ['2', '123'];
+            desiredOutcome = ['12'];
+            expect(actual).to.eql(desiredOutcome);
+            inputSequence = ['123', '1c2'];
+            actual = collectABs(inputSequence);
+            desiredOutcome = ['123'];
             expect(actual).to.eql(desiredOutcome);
         });
-        it('can get letter sequence consisting of just some numbers possibly followed by the letter a only', () => {
-            let inputSequence = ['2', '3a'];
+        it('can get strings consisting of a multi-digit string or letter a', () => {
+            let inputSequence = ['12', 'a'];
             let actual = collectABs(inputSequence);
-            let desiredOutcome = ['2', '3a'];
+            let desiredOutcome = ['12', 'a'];
+            expect(actual).to.eql(desiredOutcome);
+            inputSequence = ['112', '345', 'a'];
+            actual = collectABs(inputSequence);
+            desiredOutcome = ['112', '345', 'a'];
+            expect(actual).to.eql(desiredOutcome);
+        });
+        it('can get strings consisting of numbers, letter a or number followed by a', () => {
+            let inputSequence = ['25', '13a', 'c', '13x', 'a'];
+            let actual = collectABs(inputSequence);
+            let desiredOutcome = ['25', '13a', 'a'];
             expect(actual).to.eql(desiredOutcome);
             inputSequence = ['2a', '123a', '1', '25c'];
             actual = collectABs(inputSequence);
             desiredOutcome = ['2a', '123a', '1'];
             expect(actual).to.eql(desiredOutcome);
         });
-        it('can get letter sequence consisting of mixed sequences (some containing another lettrr)', () => {
-            let inputSequence = ['2a', '123a', '25'];
+        it('can get strings consisting of numbers, letter a or number followed by a and letter b', () => {
+            let inputSequence = ['25', '13a', 'b', 'c', '13x', 'a'];
             let actual = collectABs(inputSequence);
-            let desiredOutcome = ['2a', '123a', '25'];
+            let desiredOutcome = ['25', '13a', 'b', 'a'];
             expect(actual).to.eql(desiredOutcome);
-            inputSequence = ['2a', '123a', '1', '25c'];
+            inputSequence = ['2a', '123a', '1', 'b', '25c'];
             actual = collectABs(inputSequence);
-            desiredOutcome = ['2a', '123a', '1'];
+            desiredOutcome = ['2a', '123a', '1', 'b'];
+            expect(actual).to.eql(desiredOutcome);
+        });
+        it('can get strings consisting of numbers, letter a or number followed by a and letter b and number followed by letter b', () => {
+            let inputSequence = ['25', '13a', 'b', 'c', '13x', 'a', '100b'];
+            let actual = collectABs(inputSequence);
+            let desiredOutcome = ['25', '13a', 'b', 'a', '100b'];
+            expect(actual).to.eql(desiredOutcome);
+            inputSequence = ['2a', '123a', '1', 'b', '25c', '35b'];
+            actual = collectABs(inputSequence);
+            desiredOutcome = ['2a', '123a', '1', 'b', '35b'];
+            expect(actual).to.eql(desiredOutcome);
+        });
+        it('can get strings consisting of numbers, letter a or number followed by a and letter b and string of mixes of a and b', () => {
+            let inputSequence = ['25', '13a', 'b', 'c', '13x', 'a', '100b', 'ab'];
+            let actual = collectABs(inputSequence);
+            let desiredOutcome = ['25', '13a', 'b', 'a', '100b', 'ab'];
+            expect(actual).to.eql(desiredOutcome);
+            inputSequence = ['2a', '123a', '1', 'b', '25c', '35b', '31a24b'];
+            actual = collectABs(inputSequence);
+            desiredOutcome = ['2a', '123a', '1', 'b', '35b', '31a24b'];
             expect(actual).to.eql(desiredOutcome);
         });
     });
