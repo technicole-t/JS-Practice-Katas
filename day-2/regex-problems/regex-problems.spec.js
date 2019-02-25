@@ -25,6 +25,42 @@ describe('regex-problems', () => {
             expect(actual).to.equal(desiredOutcome);
         });
     });
+    describe('removeComments()', () => {
+        it('can remove a single comment from a string', () => {
+            let inputCode = '// abc';
+            let actual = removeComments(inputCode);
+            let desiredOutcome = '';
+            expect(actual).to.equal(desiredOutcome);
+            inputCode = '//abc';
+            actual = removeComments(inputCode);
+            desiredOutcome = '';
+            expect(actual).to.equal(desiredOutcome);
+        });
+        it('can remove a single comment from a string on two lines', () => {
+            let inputCode =
+                `const sum = (a,b) => a + b;
+// abc`;
+            let actual = removeComments(inputCode);
+            let desiredOutcome = `const sum = (a,b) => a + b;
+`;
+            expect(actual).to.equal(desiredOutcome);
+        });
+        it('can remove multiple comments from a string', () => {
+            let inputCode =
+                `const sum = (a, b) => a + b;
+//something to be ignored
+// another comment intended for humans`;
+            let actual = removeComments(inputCode);
+            let desiredOutcome = `const sum = (a, b) => a + b;
+
+`;
+            expect(actual).to.equal(desiredOutcome);
+            inputCode = '//abc';
+            actual = removeComments(inputCode);
+            desiredOutcome = '';
+            expect(actual).to.equal(desiredOutcome);
+        });
+    });
     describe('getIDs()', () => {
         it('can get a single letter id from a div string with no inner text', () => {
             let inputCode = ['<div id="a"></div>'];
