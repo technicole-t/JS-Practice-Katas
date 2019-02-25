@@ -207,7 +207,8 @@ describe('practice iteration', () => {
         'Vel',
         'Sam',
         'Jonny',
-        'Mitch'
+        'Mitch',
+        'Alex'
       ]);
     });
   });
