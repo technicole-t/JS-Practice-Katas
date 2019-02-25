@@ -67,15 +67,35 @@ describe('regex-problems', () => {
             expect(actual).to.eql(desiredOutcome);
         });
     });
-    describe('filterDipthongs()', () => {
-        it('can filter out a single word', () => {
-            let inputWords = ['cool'];
-            let actual = filterDipthongs(inputWords);
-            let desiredOutcome = ['cool'];
+    describe('collectABs()', () => {
+        it('can get letter sequence consisting of just numbers', () => {
+            let inputSequence = ['2', '123'];
+            let actual = collectABs(inputSequence);
+            let desiredOutcome = ['2'];
             expect(actual).to.eql(desiredOutcome);
-            inputWords = ['been'];
-            actual = filterDipthongs(inputCode);
-            desiredOutcome = ['been'];
+            inputSequence = ['2', '123'];
+            actual = collectABs(inputSequence);
+            desiredOutcome = ['2', '123'];
+            expect(actual).to.eql(desiredOutcome);
+        });
+        it('can get letter sequence consisting of just some numbers possibly followed by the letter a only', () => {
+            let inputSequence = ['2', '3a'];
+            let actual = collectABs(inputSequence);
+            let desiredOutcome = ['2', '3a'];
+            expect(actual).to.eql(desiredOutcome);
+            inputSequence = ['2a', '123a', '1', '25c'];
+            actual = collectABs(inputSequence);
+            desiredOutcome = ['2a', '123a', '1'];
+            expect(actual).to.eql(desiredOutcome);
+        });
+        it('can get letter sequence consisting of mixed sequences (some containing another lettrr)', () => {
+            let inputSequence = ['2a', '123a', '25'];
+            let actual = collectABs(inputSequence);
+            let desiredOutcome = ['2a', '123a', '25'];
+            expect(actual).to.eql(desiredOutcome);
+            inputSequence = ['2a', '123a', '1', '25c'];
+            actual = collectABs(inputSequence);
+            desiredOutcome = ['2a', '123a', '1'];
             expect(actual).to.eql(desiredOutcome);
         });
     });

@@ -17,7 +17,7 @@ describe('using map()', () => {
         it('returns array with every number incremented by provided increment', () => {
             let list = [3, 4];
             let actual = incrementNums(list, 1);
-            let expected = (expected = [4, 5]);
+            let expected = [4, 5];
             expect(actual).to.eql(expected);
 
             list = [3, 4, 66, 74];
@@ -130,7 +130,7 @@ describe('using map()', () => {
                 { title: 'Muppets Christmas Carol', year: 1992, ImdbRating: 9.7 }
             ];
             let key = 'title';
-            let actual = getFilmTitles(list, key);
+            let actual = getObjectProperties(list, key);
             let expected = ['Ponyo', 'Muppets Christmas Carol'];
             expect(actual).to.eql(expected);
 
