@@ -37,27 +37,15 @@ describe('regex-problems', () => {
             expect(actual).to.equal(desiredOutcome);
         });
         it('can remove a single comment from a string on two lines', () => {
-            let inputCode =
-                `const sum = (a,b) => a + b;
-// abc`;
+            let inputCode = 'const sum = (a,b) => a + b;\n// abc';
             let actual = removeComments(inputCode);
-            let desiredOutcome = `const sum = (a,b) => a + b;
-`;
+            let desiredOutcome = 'const sum = (a,b) => a + b;\n';
             expect(actual).to.equal(desiredOutcome);
         });
         it('can remove multiple comments from a string', () => {
-            let inputCode =
-                `const sum = (a, b) => a + b;
-//something to be ignored
-// another comment intended for humans`;
+            let inputCode = 'const sum = (a, b) => a + b;\n//something to be ignored\n// another comment intended for humans';
             let actual = removeComments(inputCode);
-            let desiredOutcome = `const sum = (a, b) => a + b;
-
-`;
-            expect(actual).to.equal(desiredOutcome);
-            inputCode = '//abc';
-            actual = removeComments(inputCode);
-            desiredOutcome = '';
+            let desiredOutcome = 'const sum = (a, b) => a + b;\n\n';
             expect(actual).to.equal(desiredOutcome);
         });
     });
@@ -104,7 +92,7 @@ describe('regex-problems', () => {
         });
     });
     describe('collectABs()', () => {
-        it('can filter out the strings consisting of a string with multi-digit number', () => {
+        it('can filter out the strings consisting of a string with a multi-digit number', () => {
             let inputSequence = ['1', 'zsd'];
             let actual = collectABs(inputSequence);
             let desiredOutcome = ['1'];

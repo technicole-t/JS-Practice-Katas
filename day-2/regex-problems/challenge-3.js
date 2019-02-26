@@ -1,5 +1,8 @@
+
+
 const getIDs = (divs) => {
-    return divs.map(divString => {
-        return divString.match(/\<div id\="([\w-]+)">[\w ]*<\/div>/)[1];
-    });
+    // this function should iterate over an array of html
+    // strings in order to extract the id property
+    // in each string
 };
+

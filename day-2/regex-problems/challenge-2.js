@@ -1,3 +1,4 @@
 const removeComments = (text) => {
-    return text.replace(/\/\/[ \w;]+/g, '');
+    // this function should remove comments 
+    // from a string of text
 };

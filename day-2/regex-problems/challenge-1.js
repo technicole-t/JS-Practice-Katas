@@ -1,6 +1,6 @@
 const extractTotal = (codeStrings) => {
-    return codeStrings.split('\n').reduce((total, code) => {
-        if (code.match(/\d+/)) return +code.match(/\d+/)[0] + total;
-        return total;
-    }, 0);
+    // write a function that iterates over a series of line
+    // separated strings to find the total of the numbers
+    // embedded in each string
+    // use the tests to help guide you in your logic
 };
