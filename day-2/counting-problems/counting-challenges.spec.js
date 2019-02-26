@@ -2,7 +2,7 @@ const { expect } = chai;
 
 describe('counting challenges', () => {
 
-    describe('createTally', () => {
+    describe('createTally()', () => {
         it('returns empty array when given empty array', () => {
             expect(createTally([])).to.eql({});
         });
@@ -185,6 +185,33 @@ describe('counting challenges', () => {
                     }
                 ]
             }, {
+                'member_id': '41460',
+                'person_id': '10259',
+                'name': 'David Hanson',
+                'party': 'Labour',
+                'constituency': 'Delyn',
+                'office': [
+                    {
+                        'dept': 'Panel of Chairs',
+                        'position': 'Member',
+                        'from_date': '2017-06-22',
+                        'to_date': '9999-12-31'
+                    },
+                    {
+                        'dept': 'Justice Committee',
+                        'position': 'Member',
+                        'from_date': '2017-09-11',
+                        'to_date': '9999-12-31'
+                    },
+                    {
+                        'dept': 'Intelligence and Security Committee of Parliament',
+                        'position': 'Member',
+                        'from_date': '2017-11-16',
+                        'to_date': '9999-12-31'
+                    }
+                ]
+            },
+            {
                 'member_id': '41560',
                 'person_id': '11884',
                 'name': 'Greg Clark',
@@ -205,7 +232,7 @@ describe('counting challenges', () => {
         });
         it('can make tally for multiple MPs in distinct parties', () => {
             let actual = tallyMPs(MPs);
-            let expected = { labour: 2, conservative: 5, 'Scottish National Party': 4 };
+            let expected = { labour: 2, conservative: 5, 'scottish national party': 3 };
             expect(actual).to.eql(expected);
         });
     });
