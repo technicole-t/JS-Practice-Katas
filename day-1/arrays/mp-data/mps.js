@@ -50,7 +50,7 @@ const membersOfParliament = [
         'office': [
             {
                 'dept': '',
-                'position': 'The Secretary of State for Business, Energy and Industrial Strategy ',
+                'position': 'The Secretary of State for Business, Energy and Industrial Strategy',
                 'from_date': '2016-07-14',
                 'to_date': '9999-12-31'
             }

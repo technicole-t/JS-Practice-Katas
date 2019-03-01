@@ -36,6 +36,7 @@ describe('accessing arrays', () => {
       expect(rows[0][2]).to.equal(FILL_ME_IN);
     });
     it('can access array with a nested object', () => {
+      // find the correct way of accessing the object below...
       const cats = [
         {
           name: 'Shnitz',
@@ -43,17 +44,19 @@ describe('accessing arrays', () => {
           traits: { happy: true }
         }
       ];
-      expect(cats.name).to.equal(FILL_ME_IN);
-      expect(cats.toys[FILL_ME_IN]).to.equal('ball');
-      expect(cats.toys[FILL_ME_IN]).to.equal('mouse');
-      expect(cats.traits.happy).to.equal(FILL_ME_IN);
+      expect(FILL_ME_IN).to.equal('Shnitz');
+      expect(FILL_ME_IN).to.equal('ball');
+      expect(FILL_ME_IN).to.equal('mouse');
+      expect(cats[0].traits).to.equal(FILL_ME_IN);
+      // think a bit about this last one !
+      expect(cats.traits).to.equal(FILL_ME_IN);
     });
     it('can access array of nested MP objects', () => {
-      expect(membersOfParliament[1].constituency).to.equal(FILL_ME_IN);
-      expect(membersOfParliament[2].office.position).to.equal(FILL_ME_IN);
-      expect(membersOfParliament[2].office.position).to.equal(FILL_ME_IN);
-      expect(membersOfParliament[4].office[2].dept).to.equal(FILL_ME_IN);
-      expect(membersOfParliament[0].name.split(' ')[1]).to.equal(FILL_ME_IN);
+      // look in the mp-data folder at mps.js
+      expect(membersOfParliament[1].constituency).to.equal('Delyn'); // <-- access MP at index: 1
+      expect(membersOfParliament[2].office[0].position).to.equal('The Secretary of State for Business, Energy and Industrial Strategy'); // <-- access MP at index: 2  
+      expect(membersOfParliament[4].office[2].dept).to.equal('Science and Technology Committee (Commons)'); // <-- access MP at index: 4
+      expect(membersOfParliament[0].name.split(' ')[1]).to.equal('Villiers'); // <-- access MP at index: 0
     });
     it('find elements with the indexOf() method', () => {
       const haystack = [
