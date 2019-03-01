@@ -35,7 +35,26 @@ describe('accessing arrays', () => {
       expect(rows[2][2]).to.equal(FILL_ME_IN);
       expect(rows[0][2]).to.equal(FILL_ME_IN);
     });
-
+    it('can access array with a nested object', () => {
+      const cats = [
+        {
+          name: 'Shnitz',
+          toys: ['ball', 'mouse'],
+          traits: { happy: true }
+        }
+      ];
+      expect(cats.name).to.equal(FILL_ME_IN);
+      expect(cats.toys[FILL_ME_IN]).to.equal('ball');
+      expect(cats.toys[FILL_ME_IN]).to.equal('mouse');
+      expect(cats.traits.happy).to.equal(FILL_ME_IN);
+    });
+    it('can access array of nested MP objects', () => {
+      expect(membersOfParliament[1].constituency).to.equal(FILL_ME_IN);
+      expect(membersOfParliament[2].office.position).to.equal(FILL_ME_IN);
+      expect(membersOfParliament[2].office.position).to.equal(FILL_ME_IN);
+      expect(membersOfParliament[4].office[2].dept).to.equal(FILL_ME_IN);
+      expect(membersOfParliament[0].name.split(' ')[1]).to.equal(FILL_ME_IN);
+    });
     it('find elements with the indexOf() method', () => {
       const haystack = [
         'hay',
