@@ -1,5 +1,11 @@
 const { expect } = chai;
-
+const {
+  getExclaimed,
+  getOldCats,
+  getRecentTitles,
+  getEvens,
+  getMultiples
+} = require('./filter-challenges');
 describe('using filter()', () => {
   describe('getExclaimed()', () => {
     it('returns names when have exclamation marks', () => {

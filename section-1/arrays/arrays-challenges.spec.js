@@ -1,5 +1,12 @@
 'use strict';
 const { expect } = chai;
+const {
+  getFirstElement,
+  getLastElement,
+  getOuterSum,
+  getAnyItem,
+  getMiddle
+} = require('./array-challenges');
 
 describe('accessing arrays', () => {
   describe('basic array access', () => {
@@ -54,8 +61,12 @@ describe('accessing arrays', () => {
     it('can access array of nested MP objects', () => {
       // look in the mp-data folder at mps.js
       expect(membersOfParliament[1].constituency).to.equal('Delyn'); // <-- access MP at index: 1
-      expect(membersOfParliament[2].office[0].position).to.equal('The Secretary of State for Business, Energy and Industrial Strategy'); // <-- access MP at index: 2  
-      expect(membersOfParliament[4].office[2].dept).to.equal('Science and Technology Committee (Commons)'); // <-- access MP at index: 4
+      expect(membersOfParliament[2].office[0].position).to.equal(
+        'The Secretary of State for Business, Energy and Industrial Strategy'
+      ); // <-- access MP at index: 2
+      expect(membersOfParliament[4].office[2].dept).to.equal(
+        'Science and Technology Committee (Commons)'
+      ); // <-- access MP at index: 4
       expect(membersOfParliament[0].name.split(' ')[1]).to.equal('Villiers'); // <-- access MP at index: 0
     });
     it('find elements with the indexOf() method', () => {
@@ -206,7 +217,14 @@ describe('accessing arrays', () => {
       expect(actual).to.eql(expected);
     });
     it('can access middle two items in an even length array of more than 2 items', () => {
-      const arr = ['Javascript!', 'woo', 'LEEDS!', 'yorkshire', 'coding', 'northcoders'];
+      const arr = [
+        'Javascript!',
+        'woo',
+        'LEEDS!',
+        'yorkshire',
+        'coding',
+        'northcoders'
+      ];
       const actual = getMiddle(arr);
       const expected = ['LEEDS!', 'yorkshire'];
       expect(actual).to.eql(expected);
