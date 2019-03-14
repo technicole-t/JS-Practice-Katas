@@ -1,0 +1,24 @@
+{
+  "name": "fundamentals-revision",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "find ./tests -name '*_test.js' | xargs mocha -R spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/northcoders/fundamentals-revision.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/northcoders/fundamentals-revision/issues"
+  },
+  "homepage": "https://github.com/northcoders/fundamentals-revision#readme",
+  "dependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^6.0.2"
+  }
+}
