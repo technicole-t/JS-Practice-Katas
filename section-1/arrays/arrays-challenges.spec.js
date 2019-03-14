@@ -1,5 +1,5 @@
 'use strict';
-const { expect } = chai;
+const { expect } = require('chai');
 const {
   getFirstElement,
   getLastElement,

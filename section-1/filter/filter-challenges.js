@@ -17,3 +17,11 @@ const getEvens = nums => {
 const getMultiples = (nums, multiple) => {
   // returns an array of nums that are divisible by a given multiple
 };
+
+module.exports = {
+  getExclaimed,
+  getOldCats,
+  getRecentTitles,
+  getEvens,
+  getMultiples
+};

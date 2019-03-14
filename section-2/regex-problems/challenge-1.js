@@ -27,3 +27,10 @@ const collectABs = list => {
   // however, any other letters/characters in the string won't be permitted
   // '100c' , '100a2c'
 };
+
+module.exports = {
+  extractTotal,
+  removeComments,
+  getIDs,
+  collectABs
+};

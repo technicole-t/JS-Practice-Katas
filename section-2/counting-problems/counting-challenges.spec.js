@@ -1,4 +1,4 @@
-const { expect } = chai;
+const { expect } = require('chai');
 const { createTally, countVowels, tallyMPs } = require('./counting-challenges');
 const { MPs } = require('./data/mps');
 const { NCFruitBowl } = require('./data/nc-fruit-bowl');

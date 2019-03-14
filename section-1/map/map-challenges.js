@@ -1,9 +1,17 @@
-const incrementNums = (list, increment) => { };
+const incrementNums = (list, increment) => {};
 
-const multiplyNums = (list, increment) => { };
+const multiplyNums = (list, increment) => {};
 
-const extractCatNames = cats => { };
+const extractCatNames = cats => {};
 
-const getFullNames = people => { };
+const getFullNames = people => {};
 
-const getObjectProperties = objs => { };
+const getObjectProperties = objs => {};
+
+module.exports = {
+  incrementNums,
+  multiplyNums,
+  extractCatNames,
+  getFullNames,
+  getObjectProperties
+};
