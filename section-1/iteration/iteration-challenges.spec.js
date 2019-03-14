@@ -1,4 +1,4 @@
-const { expect } = chai;
+const { expect } = require('chai');
 
 describe('practice iteration', () => {
   describe('iteration problems', () => {

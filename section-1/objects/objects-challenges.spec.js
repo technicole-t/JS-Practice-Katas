@@ -1,4 +1,4 @@
-const { expect } = chai;
+const { expect } = require('chai');
 const {
   accessName,
   accessObject,
@@ -7,9 +7,9 @@ const {
   removeProperty,
   addProperty
 } = require('./objects-challenges');
-describe('object practice', function() {
+describe('object practice', function () {
   describe('object access...', () => {
-    it('check object properties with dot notation', function() {
+    it('check object properties with dot notation', function () {
       const father = {
         firstname: 'Michael',
         lastname: 'Bluth',
@@ -20,7 +20,7 @@ describe('object practice', function() {
       expect(father.firstName).to.equal(FILL_ME_IN);
       expect(father.car).to.equal(FILL_ME_IN);
     });
-    it('add properties with normal assignment', function() {
+    it('add properties with normal assignment', function () {
       const son = {};
       son.name = 'George Michael';
       son.lastname = 'Bluth';
@@ -36,7 +36,7 @@ describe('object practice', function() {
       expect(son.jobs[1]).to.equal(FILL_ME_IN);
     });
 
-    it('access properties with square bracket notation', function() {
+    it('access properties with square bracket notation', function () {
       const starWars = {
         episode4: 'A New Hope',
         episode5: 'Empire Strikes Back',
@@ -48,7 +48,7 @@ describe('object practice', function() {
       expect(starWars[FILL_ME_IN]).to.equal('The Force Awakens');
     });
 
-    it('should delete properties of an object', function() {
+    it('should delete properties of an object', function () {
       const brotherInLaw = {
         name: 'Tobias',
         lastname: 'Funke',
@@ -62,7 +62,7 @@ describe('object practice', function() {
       expect(brotherInLaw.job).to.equal(FILL_ME_IN);
     });
 
-    it('should be able to nest objects and arrays inside objects', function() {
+    it('should be able to nest objects and arrays inside objects', function () {
       const bluthFamily = {
         father: {
           name: 'George'

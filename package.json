@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "find ./tests -name '*_test.js' | xargs mocha -R spec"
+    "test": "mocha ./section-1/arrays/arrays-challenges.spec.js"
   },
   "repository": {
     "type": "git",
@@ -18,7 +18,9 @@
   },
   "homepage": "https://github.com/northcoders/fundamentals-revision#readme",
   "dependencies": {
-    "chai": "^4.2.0",
     "mocha": "^6.0.2"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0"
   }
 }
