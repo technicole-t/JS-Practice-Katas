@@ -1,16 +1,15 @@
-const createTally = (items) => {
-    // should produce a tally object from the items in an array
+const createTally = items => {
+  // should produce a tally object from the items in an array
 };
 
-
-const countVowels = (letters) => {
-    // should return a tally object for the number of vowels
-    // in a string of letters
+const countVowels = letters => {
+  // should return a tally object for the number of vowels
+  // in a string of letters
 };
 
-const tallyMPs = (MPs) => {
-    // an typical MP object looks like this:
-    /*
+const tallyMPs = MPs => {
+  // an typical MP object looks like this:
+  /*
     {
         'member_id': '41834',
         'person_id': '10523',
@@ -33,8 +32,8 @@ const tallyMPs = (MPs) => {
                 ]
     }
     */
-    // given an array of objects like this... find the tally
-    // of MPs in each party
+  // given an array of objects like this... find the tally
+  // of MPs in each party
 };
 
-
+module.exports = { createTally, countVowels, tallyMPs };
