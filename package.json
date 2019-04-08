@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha --recursive section-*",
-    "create-report": "mocha --recursive section-* --reporter mochawesome"
+    "run-tests": "mocha --recursive section-* --reporter mochawesome",
+    "create-report": "./evaluate.sh"
   },
   "repository": {
     "type": "git",
