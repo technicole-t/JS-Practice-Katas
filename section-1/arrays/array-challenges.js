@@ -1,7 +1,3 @@
-const getFirstElement = arr => {
-  // should return the first item in a given array
-};
-
 const getLastElement = arr => {
   // should return the last item in a given array
 };
@@ -30,7 +26,6 @@ const getMiddle = arr => {
 };
 
 module.exports = {
-  getFirstElement,
   getLastElement,
   getOuterSum,
   getAnyItem,

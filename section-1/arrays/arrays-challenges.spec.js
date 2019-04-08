@@ -131,15 +131,6 @@ describe('accessing arrays', () => {
       expect(sentenceWithHyphens).to.equal('Here-is-a-list-of-words');
     });
   });
-  // go to the array-chall
-  describe('getFirstElement()', () => {
-    it('can access the first element of an array', () => {
-      const words = ['a', 'b', 'c', 'd', 'e'];
-      const actual = getFirstElement(words);
-      const expected = 'a';
-      expect(actual).to.equal(expected);
-    });
-  });
   describe('getLastElement()', () => {
     it('can access last element of an array', () => {
       const words = ['hello', 'there', 'I', 'am', 'coding!'];

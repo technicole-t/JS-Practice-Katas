@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "mocha --recursive section-*"
+    "test": "mocha --recursive section-*",
+    "create-report": "mocha --recursive section-* --reporter mochawesome"
   },
   "repository": {
     "type": "git",
@@ -17,10 +18,10 @@
     "url": "https://github.com/northcoders/fundamentals-revision/issues"
   },
   "homepage": "https://github.com/northcoders/fundamentals-revision#readme",
-  "dependencies": {
-    "mocha": "^6.0.2"
-  },
+  "dependencies": {},
   "devDependencies": {
-    "chai": "^4.2.0"
+    "chai": "^4.2.0",
+    "mocha": "^3.5.3",
+    "mochawesome": "^1.5.5"
   }
 }
