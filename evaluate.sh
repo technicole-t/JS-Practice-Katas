@@ -5,6 +5,7 @@ set -uo pipefail
 
 main() {
     (
+        rm -rf node_modules
         npm i -D mocha@3.5.3 mochawesome@^1.5.5
         mocha --recursive section-* --reporter mochawesome
         open ./mochawesome-reports/mochawesome.html
