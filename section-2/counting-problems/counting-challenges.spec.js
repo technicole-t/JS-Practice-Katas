@@ -2,6 +2,7 @@ const { expect } = require('chai');
 const { createTally, countVowels, tallyMPs } = require('./counting-challenges');
 const { MPs } = require('./data/mps');
 const { NCFruitBowl } = require('./data/nc-fruit-bowl');
+
 describe('counting challenges', () => {
   describe('createTally()', () => {
     it('returns empty array when given empty array', () => {

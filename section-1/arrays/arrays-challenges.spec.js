@@ -1,7 +1,6 @@
 'use strict';
 const { expect } = require('chai');
 const {
-  getFirstElement,
   getLastElement,
   getOuterSum,
   getAnyItem,

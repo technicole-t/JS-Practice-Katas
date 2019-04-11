@@ -19,5 +19,9 @@
   },
   "homepage": "https://github.com/northcoders/fundamentals-revision#readme",
   "dependencies": {},
-  "devDependencies": {}
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^3.5.3",
+    "mochawesome": "^1.5.5"
+  }
 }
