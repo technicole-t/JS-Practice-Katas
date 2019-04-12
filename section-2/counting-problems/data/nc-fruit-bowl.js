@@ -1001,3 +1001,5 @@ const NCFruitBowl = [
     'orange',
     'orange'
 ];
+
+module.exports = NCFruitBowl;
