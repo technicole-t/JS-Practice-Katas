@@ -33,5 +33,5 @@ module.exports = {
   checkHasProperty,
   removeName,
   removeProperty,
-  addProperty
+  addProperty,
 };

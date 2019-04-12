@@ -29,5 +29,5 @@ module.exports = {
   getLastElement,
   getOuterSum,
   getAnyItem,
-  getMiddle
+  getMiddle,
 };

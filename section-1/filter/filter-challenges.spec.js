@@ -4,8 +4,9 @@ const {
   getOldCats,
   getRecentTitles,
   getEvens,
-  getMultiples
+  getMultiples,
 } = require('./filter-challenges');
+
 describe('using filter()', () => {
   describe('getExclaimed()', () => {
     it('returns names when have exclamation marks', () => {
@@ -14,7 +15,7 @@ describe('using filter()', () => {
       const expected = ['Mitch!'];
       expect(actual).to.eql(expected);
     });
-    it('returns empty array when noone has exclamation marks', () => {
+    it('returns empty array when no-one has exclamation marks', () => {
       const names = ['Mitch'];
       const actual = getExclaimed(names);
       const expected = [];
@@ -27,6 +28,7 @@ describe('using filter()', () => {
       expect(actual).to.eql(expected);
     });
   });
+
   describe('getOldCats()', () => {
     it('returns empty array when cat is younger than 8', () => {
       const cats = [{ name: 'Bean', age: 7 }];
@@ -47,6 +49,7 @@ describe('using filter()', () => {
       expect(actual).to.eql(expected);
     });
   });
+
   describe('getRecentTitles()', () => {
     it('returns empty array when films from before year 2000', () => {
       const films = [{ title: 'Jurassic Park', year: 1993 }];
@@ -63,12 +66,12 @@ describe('using filter()', () => {
     it('returns all films when all released after year 2000', () => {
       const films = [
         { title: 'Inception', year: 2010 },
-        { title: 'Up', year: 2009 }
+        { title: 'Up', year: 2009 },
       ];
       const actual = getRecentTitles(films);
       const expected = [
         { title: 'Inception', year: 2010 },
-        { title: 'Up', year: 2009 }
+        { title: 'Up', year: 2009 },
       ];
       expect(actual).to.eql(expected);
     });
@@ -76,16 +79,17 @@ describe('using filter()', () => {
       const films = [
         { title: 'Inception', year: 2010 },
         { title: 'Up', year: 2009 },
-        { title: 'Jurassic Park', year: 1993 }
+        { title: 'Jurassic Park', year: 1993 },
       ];
       const actual = getRecentTitles(films);
       const expected = [
         { title: 'Inception', year: 2010 },
-        { title: 'Up', year: 2009 }
+        { title: 'Up', year: 2009 },
       ];
       expect(actual).to.eql(expected);
     });
   });
+
   describe('getEvens()', () => {
     it('returns [] when passed []', () => {
       const actual = getEvens([]);
@@ -116,6 +120,7 @@ describe('using filter()', () => {
       expect(actual).to.eql(expected);
     });
   });
+
   describe('getMultiples()', () => {
     it('returns array of multiples with array of 1 number', () => {
       let numbers = [1];

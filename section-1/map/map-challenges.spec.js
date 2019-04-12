@@ -4,7 +4,7 @@ const {
   multiplyNums,
   extractCatNames,
   getFullNames,
-  getObjectProperties
+  getObjectProperties,
 } = require('./map-challenges');
 
 describe('using map()', () => {
@@ -37,6 +37,7 @@ describe('using map()', () => {
       expect(actual).to.eql(expected);
     });
   });
+
   describe('multiplyNums()', () => {
     it('returns an array with original numbers, when no increment is passed ', () => {
       const list = [1, 2, 3];
@@ -71,6 +72,7 @@ describe('using map()', () => {
       expect(actual).to.eql(expected);
     });
   });
+
   describe('extractCatNames()', () => {
     it('returns empty array when it passed an empty array', () => {
       const actual = extractCatNames([]);
@@ -94,6 +96,7 @@ describe('using map()', () => {
       expect(actual).to.eql(expected);
     });
   });
+
   describe('getFullNames()', () => {
     it('returns fullName in a new array for an array with a single person object', () => {
       const people = [{ firstName: 'Veronica', surName: 'Grape' }];
@@ -104,13 +107,14 @@ describe('using map()', () => {
     it('returns fullNames for an array of multiple distinct people', () => {
       const people = [
         { firstName: 'Veronica', surName: 'Grape' },
-        { firstName: 'Sam', surName: 'Caine' }
+        { firstName: 'Sam', surName: 'Caine' },
       ];
       const actual = getFullNames(people);
       const expected = ['Veronica Grape', 'Sam Caine'];
       expect(actual).to.eql(expected);
     });
   });
+
   describe('getObjectProperties()', () => {
     it('returns array of object value based on passed title key', () => {
       const list = [{ title: 'Ponyo' }];
@@ -131,10 +135,11 @@ describe('using map()', () => {
       expected = [2008];
       expect(actual).to.eql(expected);
     });
+
     it('returns an array of object values based on provided keys', () => {
       const list = [
         { title: 'Ponyo', year: 2008, ImdbRating: 7.7 },
-        { title: 'Muppets Christmas Carol', year: 1992, ImdbRating: 9.7 }
+        { title: 'Muppets Christmas Carol', year: 1992, ImdbRating: 9.7 },
       ];
       let key = 'title';
       let actual = getObjectProperties(list, key);

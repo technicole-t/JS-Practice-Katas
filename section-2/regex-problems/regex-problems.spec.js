@@ -3,8 +3,9 @@ const {
   extractTotal,
   removeComments,
   getIDs,
-  collectABs
+  collectABs,
 } = require('./challenge-1');
+
 const { codeStrings } = require('./regex-data/code-strings');
 describe('regex-problems', () => {
   describe('extractTotal()', () => {
@@ -31,6 +32,7 @@ describe('regex-problems', () => {
       expect(actual).to.equal(desiredOutcome);
     });
   });
+
   describe('removeComments()', () => {
     it('can remove a single comment from a string', () => {
       let inputCode = '// abc';
@@ -56,6 +58,7 @@ describe('regex-problems', () => {
       expect(actual).to.equal(desiredOutcome);
     });
   });
+
   describe('getIDs()', () => {
     it('can get a single letter id from a div string with no inner text', () => {
       let inputCode = ['<div id="a"></div>'];
@@ -95,13 +98,14 @@ describe('regex-problems', () => {
       let inputCode = [
         '<div id="online-menu">A La Carte</div>',
         '<div id="red-box">Welcome to the site</div>',
-        '<div id="northcoders-in-leeds">Hello</div>'
+        '<div id="northcoders-in-leeds">Hello</div>',
       ];
       let actual = getIDs(inputCode);
       let desiredOutcome = ['online-menu', 'red-box', 'northcoders-in-leeds'];
       expect(actual).to.eql(desiredOutcome);
     });
   });
+
   describe('collectABs()', () => {
     it('can filter out the strings consisting of a string with a multi-digit number', () => {
       let inputSequence = ['1', 'zsd'];

@@ -32,5 +32,5 @@ module.exports = {
   extractTotal,
   removeComments,
   getIDs,
-  collectABs
+  collectABs,
 };
