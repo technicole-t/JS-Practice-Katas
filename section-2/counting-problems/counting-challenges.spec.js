@@ -1,7 +1,7 @@
 const { expect } = require('chai');
 const { createTally, countVowels, tallyMPs } = require('./counting-challenges');
-const { MPs } = require('./data/mps');
-const { NCFruitBowl } = require('./data/nc-fruit-bowl');
+const MPs = require('./data/mps');
+const NCFruitBowl = require('./data/nc-fruit-bowl');
 
 describe('counting challenges', () => {
   describe('createTally()', () => {
@@ -26,7 +26,7 @@ describe('counting challenges', () => {
         pear: 223,
         banana: 263,
         orange: 238,
-        'lonesome plum': 1
+        'lonesome plum': 1,
       });
     });
   });
@@ -100,16 +100,16 @@ describe('counting challenges', () => {
               dept: 'Panel of Chairs',
               position: 'Member',
               from_date: '2017-06-22',
-              to_date: '9999-12-31'
+              to_date: '9999-12-31',
             },
             {
               dept: 'Environmental Audit Committee',
               position: 'Member',
               from_date: '2017-09-11',
-              to_date: '9999-12-31'
-            }
-          ]
-        }
+              to_date: '9999-12-31',
+            },
+          ],
+        },
       ];
       let actual = tallyMPs(input);
       let expected = { Labour: 1 };
@@ -128,15 +128,15 @@ describe('counting challenges', () => {
               dept: 'Panel of Chairs',
               position: 'Member',
               from_date: '2017-06-22',
-              to_date: '9999-12-31'
+              to_date: '9999-12-31',
             },
             {
               dept: 'Environmental Audit Committee',
               position: 'Member',
               from_date: '2017-09-11',
-              to_date: '9999-12-31'
-            }
-          ]
+              to_date: '9999-12-31',
+            },
+          ],
         },
         {
           member_id: '41460',
@@ -149,22 +149,22 @@ describe('counting challenges', () => {
               dept: 'Panel of Chairs',
               position: 'Member',
               from_date: '2017-06-22',
-              to_date: '9999-12-31'
+              to_date: '9999-12-31',
             },
             {
               dept: 'Justice Committee',
               position: 'Member',
               from_date: '2017-09-11',
-              to_date: '9999-12-31'
+              to_date: '9999-12-31',
             },
             {
               dept: 'Intelligence and Security Committee of Parliament',
               position: 'Member',
               from_date: '2017-11-16',
-              to_date: '9999-12-31'
-            }
-          ]
-        }
+              to_date: '9999-12-31',
+            },
+          ],
+        },
       ];
       let actual = tallyMPs(input);
       let expected = { Labour: 2 };
@@ -183,15 +183,15 @@ describe('counting challenges', () => {
               dept: 'Panel of Chairs',
               position: 'Member',
               from_date: '2017-06-22',
-              to_date: '9999-12-31'
+              to_date: '9999-12-31',
             },
             {
               dept: 'Environmental Audit Committee',
               position: 'Member',
               from_date: '2017-09-11',
-              to_date: '9999-12-31'
-            }
-          ]
+              to_date: '9999-12-31',
+            },
+          ],
         },
         {
           member_id: '41460',
@@ -204,21 +204,21 @@ describe('counting challenges', () => {
               dept: 'Panel of Chairs',
               position: 'Member',
               from_date: '2017-06-22',
-              to_date: '9999-12-31'
+              to_date: '9999-12-31',
             },
             {
               dept: 'Justice Committee',
               position: 'Member',
               from_date: '2017-09-11',
-              to_date: '9999-12-31'
+              to_date: '9999-12-31',
             },
             {
               dept: 'Intelligence and Security Committee of Parliament',
               position: 'Member',
               from_date: '2017-11-16',
-              to_date: '9999-12-31'
-            }
-          ]
+              to_date: '9999-12-31',
+            },
+          ],
         },
         {
           member_id: '41560',
@@ -232,10 +232,10 @@ describe('counting challenges', () => {
               position:
                 'The Secretary of State for Business, Energy and Industrial Strategy ',
               from_date: '2016-07-14',
-              to_date: '9999-12-31'
-            }
-          ]
-        }
+              to_date: '9999-12-31',
+            },
+          ],
+        },
       ];
       let actual = tallyMPs(input);
       let expected = { Labour: 2, Conservative: 1 };

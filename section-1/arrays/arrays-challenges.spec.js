@@ -4,7 +4,7 @@ const {
   getLastElement,
   getOuterSum,
   getAnyItem,
-  getMiddle
+  getMiddle,
 } = require('./array-challenges');
 
 describe('accessing arrays', () => {
@@ -16,6 +16,7 @@ describe('accessing arrays', () => {
       expect(actual).to.equal(expected);
     });
   });
+
   describe('getOuterSum()', () => {
     it('can get the outer sum of an array of two numbers', () => {
       const numberPair = [100, 3];
@@ -36,6 +37,7 @@ describe('accessing arrays', () => {
       expect(actual).to.equal(expected);
     });
   });
+
   describe('getAnyItem()', () => {
     it('can access an array using an index less than the array length', () => {
       let arr = ['a', 'b', 'c'];
@@ -50,9 +52,9 @@ describe('accessing arrays', () => {
       expect(actual).to.equal(expected);
     });
     it('can access an array using an index equal to the array length', () => {
-      let arr = ['a', 'b', 'c'];
-      let actual = getAnyItem(arr, 3);
-      let expected = 'a';
+      const arr = ['a', 'b', 'c'];
+      const actual = getAnyItem(arr, 3);
+      const expected = 'a';
       expect(actual).to.equal(expected);
     });
     it('can access an array using an index greater than the array length', () => {
@@ -65,6 +67,7 @@ describe('accessing arrays', () => {
       expect(actual).to.equal(expected);
     });
   });
+
   describe('getMiddle()', () => {
     it('can access middle item for an array containing one item', () => {
       const arr = ['LEEDS!'];
@@ -91,7 +94,7 @@ describe('accessing arrays', () => {
         'LEEDS!',
         'yorkshire',
         'coding',
-        'northcoders'
+        'northcoders',
       ];
       const actual = getMiddle(arr);
       const expected = ['LEEDS!', 'yorkshire'];
