@@ -1,4 +1,4 @@
-exports.NCFruitBowl = [
+module.exports = [
     'apple',
     'pear',
     'pear',
