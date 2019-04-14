@@ -112,7 +112,7 @@ describe('counting challenges', () => {
         }
       ];
       let actual = tallyMPs(input);
-      let expected = { labour: 1 };
+      let expected = { Labour: 1 };
       expect(actual).to.eql(expected);
     });
     it('can tally MPs for an array of multiple MPs of the same party', () => {
@@ -167,7 +167,7 @@ describe('counting challenges', () => {
         }
       ];
       let actual = tallyMPs(input);
-      let expected = { labour: 2 };
+      let expected = { Labour: 2 };
       expect(actual).to.eql(expected);
     });
     it('can tally MPS for an array of MPs in distinct parties', () => {
@@ -238,15 +238,15 @@ describe('counting challenges', () => {
         }
       ];
       let actual = tallyMPs(input);
-      let expected = { labour: 2, conservative: 1 };
+      let expected = { Labour: 2, Conservative: 1 };
       expect(actual).to.eql(expected);
     });
     it('can make tally for multiple MPs in distinct parties', () => {
       let actual = tallyMPs(MPs);
       let expected = {
-        labour: 2,
-        conservative: 5,
-        'scottish national party': 3
+        Labour: 2,
+        Conservative: 5,
+        'Scottish National Party': 3
       };
       expect(actual).to.eql(expected);
     });

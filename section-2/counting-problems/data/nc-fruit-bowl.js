@@ -1,4 +1,4 @@
-const NCFruitBowl = [
+exports.NCFruitBowl = [
     'apple',
     'pear',
     'pear',

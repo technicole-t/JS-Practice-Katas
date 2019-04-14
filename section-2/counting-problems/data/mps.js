@@ -1,4 +1,4 @@
-const MPs = [
+exports.MPs = [
     {
         'member_id': '41797',
         'person_id': '11500',
@@ -198,3 +198,4 @@ const MPs = [
         ]
     }
 ];
+
