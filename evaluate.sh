@@ -9,6 +9,7 @@ main() {
         npm i -D mocha@3.5.3 mochawesome@^1.5.5 chai
         mocha --recursive section-* --reporter mochawesome
         open ./mochawesome-reports/mochawesome.html
+        xdg-open ./mochawesome-reports/mochawesome.html
     )
 }
 
