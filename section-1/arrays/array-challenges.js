@@ -20,10 +20,11 @@ const getAnyItem = (arr, position) => {
 };
 
 const getMiddle = arr => {
-  // returns the middle number in an array for arr of odd length
-  // returns the middle two numbers in an array for arr of even length
-  // e.g. getMiddle(42) // should return [42]
-  // e.g. getMiddle(13) // should return [6,7] 
+  // returns the middle item in an array for arr of odd length
+  // returns the middle two items in an array for arr of even length
+  // e.g. getMiddle(['a']) // should return 'a'
+  // e.g. getMiddle([42, 20, 13, 6]) // should return [20, 13]
+  // e.g. getMiddle([42, 20, 13, 6, 100]) // should return [13] 
 };
 
 module.exports = {
