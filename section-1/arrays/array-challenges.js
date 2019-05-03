@@ -22,7 +22,8 @@ const getAnyItem = (arr, position) => {
 const getMiddle = arr => {
   // returns the middle item in an array for arr of odd length
   // returns the middle two items in an array for arr of even length
-  // e.g. getMiddle([42]) // should return 42
+  // e.g. getMiddle([42]) // should return [42]
+  // e.g. getMiddle([13]) // should return [6,7] 
 };
 
 module.exports = {
