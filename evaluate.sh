@@ -8,9 +8,12 @@ main() {
         rm -rf node_modules
         npm i -D mocha@3.5.3 mochawesome@^1.5.5 chai
         mocha --recursive section-* --reporter mochawesome
-        open ./mochawesome-reports/mochawesome.html
-        xdg-open ./mochawesome-reports/mochawesome.html
+        if hash xdg-open 2>/dev/null; then
+            xdg-open ./mochawesome-reports/mochawesome.html
+        else
+            open ./mochawesome-reports/mochawesome.html
+        fi
     )
 }
 
-main 
+main
