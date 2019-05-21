@@ -98,3 +98,5 @@ a76982kgnusxfi
 ytzsu6580479sgvdtahxrzmkiecyfuobplnw
 vumifercog2jdsbat
 qeojbtxygpfduvkwlh`;
+
+module.exports = codeStrings;
