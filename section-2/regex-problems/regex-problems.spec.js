@@ -6,7 +6,8 @@ const {
   collectABs,
 } = require('./challenge-1');
 
-const { codeStrings } = require('./regex-data/code-strings');
+const codeStrings = require('./regex-data/code-strings');
+
 describe('regex-problems', () => {
   describe('extractTotal()', () => {
     it('can find the total from a single code string', () => {
