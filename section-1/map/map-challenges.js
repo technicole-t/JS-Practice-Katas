@@ -6,7 +6,7 @@ const extractCatNames = cats => {};
 
 const getFullNames = people => {};
 
-const getObjectProperties = objs => {};
+const getObjectProperties = (objs, key) => {};
 
 module.exports = {
   incrementNums,
